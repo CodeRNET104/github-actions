@@ -16,6 +16,7 @@ jobs:
       - name: Send notification email for PR
         uses: dawidd6/action-send-mail@v3
         with:
+          
           server_address: smtp.gmail.com # SMTP server address
           server_port: 465 # SMTP server port
           username: ${{ secrets.EMAIL }} # Mail gönderilecek, mail adresi
@@ -23,6 +24,7 @@ jobs:
           to: ${{ secrets.EMAIL_TO }} # Mail gönderilecek, mail adresi
           from: ${{ secrets.EMAIL_FROM }} # Mail gönderen, mail adresi
           subject: "Push Notification fo PR - ${{github.event_name}}" # Mail konusu
+          content_type: "text/html" # Mail içeriği
           body: |
             <table class="table table-striped">
                 <caption>${{ github.event_name }} event triggered for PR</caption>
