@@ -14,5 +14,5 @@ jobs:
             password: ${{ secrets.PASSWORD }} # Mail gönderilecek, mail adresinin şifresi
             subject: 'Push Notification'      # Mail konusu
             body: 'Push Notification'         # Mail içeriği
-            to: ${{ secrets.EMAIL }}          # Mail gönderilecek, mail adresi
-            from: ${{ secrets.EMAIL }}        # Mail gönderen, mail adresi
+            to: ${{ secrets.EMAIL_TO }}       # Mail gönderilecek, mail adresi
+            from: ${{ secrets.EMAIL_FROM }}   # Mail gönderen, mail adresi
