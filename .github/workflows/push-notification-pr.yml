@@ -22,8 +22,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           to: ${{ secrets.EMAIL_TO }}
           from: ${{ secrets.EMAIL_FROM }}
-          subject: 'Push Notification for PR - ${{ github.event_name }}'
-          convert_markdown: true
+          subject: 'Push Notification for PR - ${{ github.event_name }}' 
           html_body: |  
             <html lang="en"> 
             <head>
