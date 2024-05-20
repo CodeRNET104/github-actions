@@ -24,7 +24,7 @@ jobs:
           from: ${{ secrets.EMAIL_FROM }}
           subject: 'Push Notification for PR - ${{ github.event_name }}'
           convert_markdown: true
-          body: |  
+          html_body: |  
             <html lang="en"> 
             <head>
                 <meta charset="UTF-8">
